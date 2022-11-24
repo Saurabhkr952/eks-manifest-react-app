@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-portfolio-deployment
+  labels:
+    app: my-portfolio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-portfolio
+  template:
+    metadata:
+      labels:
+        app: my-portfolio
+    spec:
+      imagePullSecrets:  # mandatory
+      - name: regsecret
+      containers:
+      - name: my-portfolio
+        image: saurabhkr952/my-portfolio:0.1.0-63
+        imagePullPolicy: Always  # mandatory
+        ports:
+        - containerPort: 80
