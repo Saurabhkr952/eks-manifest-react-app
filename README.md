@@ -5,4 +5,4 @@
 
 
 
-This manifest is for react application. [Link:](https://github.com/Saurabhkr952/my-portfolio)
+This manifest is for react application. [Link](https://github.com/Saurabhkr952/my-portfolio)
